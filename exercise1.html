@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+
+		/*
+			Exercise 1
+			The following code should log to console "Homer", "Barney", "Marge"
+			How should we fix this?
+		*/
+		var WIDTH = 0;
+		var HEIGHT = 1;
+		var COLOR = 2;
+		var NAME = 3;
+
+		function createCharacter(width, height, color, name) {
+			var newCharacter = [  //error was caused by failing to add var in front of this. 
+				width,
+				height,
+				color,
+				name
+			];
+			return widget;
+		}
+
+		var widget = createCharacter(10, 12, "yellow", "Homer"); // widget calls the function and tells you what inputs are.
+		var widget2 = createCharacter(12, 18, "blue", "Barney");//then widget2 calls the same fn with different input.
+		var widget3 = createCharacter(4, 7, "red", "Marge");
+
+		//Hey! Don't re-order these.
+		console.log(widget[NAME]);
+		console.log(widget2[NAME]);
+		console.log(widget3[NAME]);
+	</script>
+</body>
+
+</html>

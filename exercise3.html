@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/*
+			Is craneId global or local on line 23? It is global because it is declared outside of a function. It is declared about line 44 or so (depending on how much I type up here)
+
+
+			Why is isViable not global on line 33? isViable is not declared outside of a function so it is local.
+			
+			Put into english what makes a "viable" crane by reading through the function isViableCrane
+
+			function isViableCrane runs for each crane. If the Length of the Crane is greater than the Height of the crane then it is viable and the value is returned and is available for the console.log. If this is not true then isViable returns false and nothing happens. End result: arrays for two cranes will get console.logged.
+
+		*/
+
+		//Indexes for the crane array
+		var ID = 0;
+		var HEIGHT = 1;
+		var LENGTH = 2;
+
+		function createCrane(boomHeight, hoistLength) {
+			craneId = craneId + 1;  //this is 
+			return [
+				craneId,
+				boomHeight,
+				hoistLength
+			];
+		}
+
+		function isViableCrane(crane) {
+			if (crane[LENGTH] > crane[HEIGHT]) {
+				isViable = true;
+			} else {
+				isViable = false;
+			}
+			var isViable;
+			return isViable;
+		}
+
+		var craneId = 0;
+		var cranes = [
+			createCrane(10, 15),
+			createCrane(12, 5),
+			createCrane(7, 10)
+		];
+
+		for (var c = 0; c < cranes.length; c++) {
+			if (isViableCrane(cranes[c])) {
+				console.log(cranes[c]);
+			}
+		}
+	</script>
+</body>
+
+</html>
