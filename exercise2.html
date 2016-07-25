@@ -24,7 +24,10 @@
 		console.log(a());
 	</script>
 </body>
-//there are three different variables named a but need to explain...
-//there is a var a outside the function that is used to call createFunction. There is a var a within the function that is used to call an anonymous function then there is the third var a within the anonymous function.
+
+<!-- a on line 17 is an anonymous function and its scope is inside the function createFunction.
+a on line 23 is assigned to createFunction and its scope is global (not declared within in any function)
+a on line 18 is inside the anonymous function which is inside the createFunction function and thus has the most interior scope. 
+-->
 
 </html>
